@@ -140,3 +140,21 @@ body {
     transition-duration: .3s;
 }
 
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}

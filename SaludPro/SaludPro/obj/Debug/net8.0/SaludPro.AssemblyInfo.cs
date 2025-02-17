@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SaludPro")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f269a59217d564829997182f096f81890038d95b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+215add45d2a6da6b8f7a631f3a3f9e8994d126c5")]
 [assembly: System.Reflection.AssemblyProductAttribute("SaludPro")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SaludPro")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
