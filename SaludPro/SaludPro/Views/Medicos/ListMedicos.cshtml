@@ -1,0 +1,105 @@
+﻿@* @model IEnumerable<Medico> *@
+
+@{
+    ViewData["Title"] = "Listado de Médicos";
+}
+
+<h2>Listado de Médicos</h2>
+
+<!-- Botón para abrir el modal de creación -->
+<button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#crearMedicoModal">
+    Crear Nuevo Médico
+</button>
+
+@* <div class="row">
+    @foreach (var medico in Model)
+    {
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="@medico.FotoPath" class="card-img-top" alt="Foto de @medico.Nombre" />
+                <div class="card-body">
+                    <h5 class="card-title">@medico.Nombre @medico.Apellido</h5>
+                    <p class="card-text">
+                        <strong>Correo:</strong> @medico.Correo<br />
+                        <strong>Teléfono:</strong> @medico.Telefono<br />
+                        <strong>Cédula:</strong> @medico.Cedula
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+</div> *@
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-4" ;">
+            <img src="https://img.freepik.com/foto-gratis/doctor-sonriente-estetoscopio-aislado-gris_651396-974.jpg" class="card-img-top img-fluid" alt="Foto de Juan Pérez" style="height: 200px; object-fit: cover;" />
+            <div class="card-body">
+                <h5 class="card-title">Juan Pérez</h5>
+                <p class="card-text">
+                    <strong>Correo:</strong> juan.perez@ejemplo.com<br />
+                    <strong>Teléfono:</strong> (809) 555-1234<br />
+                    <strong>Cédula:</strong> 001-1234567-8
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card mb-4" style="width: 18rem;">
+            <img src="https://passport-photo.online/_optimized/prepare2.0498e1e2-opt-1920.WEBP" class="card-img-top img-fluid" alt="Foto de Juan Pérez" style="height: 200px; object-fit: cover;" />
+            <div class="card-body">
+                <h5 class="card-title">Juan Pérez</h5>
+                <p class="card-text">
+                    <strong>Correo:</strong> juan.perez@ejemplo.com<br />
+                    <strong>Teléfono:</strong> (809) 555-1234<br />
+                    <strong>Cédula:</strong> 001-1234567-8
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal para Crear Médico -->
+<div class="modal fade" id="crearMedicoModal" tabindex="-1" aria-labelledby="crearMedicoLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="crearMedicoLabel">Crear Nuevo Médico</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="Crear" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label class="form-label">Nombre</label>
+                        <input type="text" class="form-control" name="Nombre" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Apellido</label>
+                        <input type="text" class="form-control" name="Apellido" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Correo</label>
+                        <input type="email" class="form-control" name="Correo" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" name="Telefono" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Cédula</label>
+                        <input type="text" class="form-control" name="Cedula" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Foto del Médico</label>
+                        <input type="file" class="form-control" name="foto" accept="image/*" required />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Crear Médico</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,185 @@
+﻿@* @model List<UsuarioViewModel> *@
+
+@{
+    ViewData["Title"] = "Mantenimiento de Usuarios";
+}
+
+<h2>Mantenimiento de Usuarios</h2>
+
+<button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#crearUsuarioModal">
+    Crear Nuevo Usuario
+</button>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Nombre de Usuario</th>
+            <th>Tipo de Usuario</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+            <tr>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Correo</td>
+                <td>NombreUsuario</td>
+                <td>TipoUsuario</td>
+                <td class="d-flex">
+                    <button class="btn btn-warning btn-sm mx-1" data-bs-toggle="modal" data-bs-target="#editarUsuarioModal" data-id="usuario.Id" data-nombre="usuario.Nombre" data-apellido="usuario.Apellido" data-correo="usuario.Correo" data-nombreusuario="usuario.NombreUsuario" data-tipousuario="usuario.TipoUsuario">
+                        Editar
+                    </button>
+                    <button type="button" class="btn btn-danger btn-sm mx-1" data-bs-toggle="modal" data-bs-target="#confirmarEliminacionModal" data-id="usuario.Id">
+                        Eliminar
+                    </button>
+                </td>
+            </tr>
+        
+    </tbody>
+    @* <tbody>
+        @foreach (var usuario in Model)
+        {
+            <tr>
+                <td>@usuario.Nombre</td>
+                <td>@usuario.Apellido</td>
+                <td>@usuario.Correo</td>
+                <td>@usuario.NombreUsuario</td>
+                <td>@usuario.TipoUsuario</td>
+                <td class="d-flex">
+                    <button class="btn btn-warning btn-sm mx-1" data-bs-toggle="modal" data-bs-target="#editarUsuarioModal" data-id="@usuario.Id" data-nombre="@usuario.Nombre" data-apellido="@usuario.Apellido" data-correo="@usuario.Correo" data-nombreusuario="@usuario.NombreUsuario" data-tipousuario="@usuario.TipoUsuario">
+                        Editar
+                    </button>
+                    <button type="button" class="btn btn-danger btn-sm mx-1" data-bs-toggle="modal" data-bs-target="#confirmarEliminacionModal" data-id="@usuario.Id">
+                        Eliminar
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody> *@
+</table>
+
+<!-- Modal para Crear Usuario -->
+<div class="modal fade" id="crearUsuarioModal" tabindex="-1" aria-labelledby="crearUsuarioLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="crearUsuarioLabel">Crear Nuevo Usuario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="CrearUsuario" method="post">
+                    <div class="mb-3">
+                        <label class="form-label">Nombre</label>
+                        <input type="text" class="form-control" name="Nombre" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Apellido</label>
+                        <input type="text" class="form-control" name="Apellido" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Correo</label>
+                        <input type="email" class="form-control" name="Correo" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Nombre de Usuario</label>
+                        <input type="text" class="form-control" name="NombreUsuario" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" name="Password" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Confirmar Contraseña</label>
+                        <input type="password" class="form-control" name="ConfirmPassword" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Tipo de Usuario</label>
+                        <select class="form-select" name="TipoUsuario" required>
+                            <option value="Admin">Administrador</option>
+                            <option value="Asistente">Asistente</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Crear Usuario</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para Editar Usuario -->
+<div class="modal fade" id="editarUsuarioModal" tabindex="-1" aria-labelledby="editarUsuarioLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editarUsuarioLabel">Editar Usuario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editarUsuarioForm" action="/Usuarios/Editar" method="post">
+                    <input type="hidden" id="UsuarioId" name="Id" />
+                    <div class="mb-3">
+                        <label for="Nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="Nombre" name="Nombre" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="Apellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="Apellido" name="Apellido" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="Correo" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="Correo" name="Correo" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="NombreUsuario" class="form-label">Nombre de Usuario</label>
+                        <input type="text" class="form-control" id="NombreUsuario" name="NombreUsuario" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="Password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="Password" name="Password" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="ConfirmPassword" class="form-label">Confirmar Contraseña</label>
+                        <input type="password" class="form-control" id="ConfirmPassword" name="ConfirmPassword" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="TipoUsuario" class="form-label">Tipo de Usuario</label>
+                        <select class="form-select" id="TipoUsuario" name="TipoUsuario" required>
+                            <option value="Admin">Administrador</option>
+                            <option value="Asistente">Asistente</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Confirmación de Eliminación -->
+<div class="modal fade" id="confirmarEliminacionModal" tabindex="-1" aria-labelledby="confirmarEliminacionLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmarEliminacionLabel">Confirmar Eliminación</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <p>¿Está seguro que desea eliminar este usuario?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger" id="btnConfirmarEliminar">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,16 +1,16 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAssetEndpoint Include="_content/SaludPro/css/LoginStyles.0rqr3zhu1d.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\LoginStyles.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"0rqr3zhu1d"},{"Name":"integrity","Value":"sha256-1GD6iScd52W\u002BAkIqk9XAuDtEQc584IF2IAvCzndrmAE="},{"Name":"label","Value":"_content/SaludPro/css/LoginStyles.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2721"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00221GD6iScd52W\u002BAkIqk9XAuDtEQc584IF2IAvCzndrmAE=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Feb 2025 15:33:58 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/SaludPro/css/LoginStyles.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\LoginStyles.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1GD6iScd52W\u002BAkIqk9XAuDtEQc584IF2IAvCzndrmAE="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2721"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00221GD6iScd52W\u002BAkIqk9XAuDtEQc584IF2IAvCzndrmAE=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Feb 2025 15:33:58 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-S1Pb5VwnvXt5YWNVx7rju8QOqHpjOkhVPsyARUmH0/o="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2701"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022S1Pb5VwnvXt5YWNVx7rju8QOqHpjOkhVPsyARUmH0/o=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Feb 2025 19:43:14 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SaludPro/css/LoginStyles.r8hg0itd6v.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\LoginStyles.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"r8hg0itd6v"},{"Name":"integrity","Value":"sha256-S1Pb5VwnvXt5YWNVx7rju8QOqHpjOkhVPsyARUmH0/o="},{"Name":"label","Value":"_content/SaludPro/css/LoginStyles.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2701"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022S1Pb5VwnvXt5YWNVx7rju8QOqHpjOkhVPsyARUmH0/o=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Feb 2025 19:43:14 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/SaludPro/css/RegisterStyles.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\RegisterStyles.css'))</AssetFile>
@@ -24,17 +24,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"w3iorn1ney"},{"Name":"integrity","Value":"sha256-rPh2\u002BmnWIMJkQiAm6xdy6OopDHfRzt4lYdqh\u002BYxroaQ="},{"Name":"label","Value":"_content/SaludPro/css/RegisterStyles.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3421"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022rPh2\u002BmnWIMJkQiAm6xdy6OopDHfRzt4lYdqh\u002BYxroaQ=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Feb 2025 15:43:03 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/SaludPro/css/site.c2tiyv64ts.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"c2tiyv64ts"},{"Name":"integrity","Value":"sha256-pAGv4ietcJNk/EwsQZ5BN9\u002BK4MuNYS2a9wl4Jw\u002Bq9D0="},{"Name":"label","Value":"_content/SaludPro/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"362"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022pAGv4ietcJNk/EwsQZ5BN9\u002BK4MuNYS2a9wl4Jw\u002Bq9D0=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Feb 2025 14:29:13 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/SaludPro/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-pAGv4ietcJNk/EwsQZ5BN9\u002BK4MuNYS2a9wl4Jw\u002Bq9D0="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"362"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022pAGv4ietcJNk/EwsQZ5BN9\u002BK4MuNYS2a9wl4Jw\u002Bq9D0=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Feb 2025 14:29:13 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-GyuOD4XAfyzdv9WS5i2/8OCS5hTfUbn6wwGHhccKhf0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3007"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022GyuOD4XAfyzdv9WS5i2/8OCS5hTfUbn6wwGHhccKhf0=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Feb 2025 23:59:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/SaludPro/css/site.hhz5m7s2lm.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"hhz5m7s2lm"},{"Name":"integrity","Value":"sha256-GyuOD4XAfyzdv9WS5i2/8OCS5hTfUbn6wwGHhccKhf0="},{"Name":"label","Value":"_content/SaludPro/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3007"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022GyuOD4XAfyzdv9WS5i2/8OCS5hTfUbn6wwGHhccKhf0=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Feb 2025 23:59:54 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/SaludPro/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
@@ -748,13 +748,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\SaludPro.8xjplg3tsc.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"8xjplg3tsc"},{"Name":"integrity","Value":"sha256-HBa9XvhKfc5meIgbZ5pauaPytd5G2lzQGmcWqAZG7dE="},{"Name":"label","Value":"_content/SaludPro/SaludPro.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1126"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HBa9XvhKfc5meIgbZ5pauaPytd5G2lzQGmcWqAZG7dE=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Feb 2025 15:01:55 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1126"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HBa9XvhKfc5meIgbZ5pauaPytd5G2lzQGmcWqAZG7dE=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Feb 2025 20:20:16 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/SaludPro/SaludPro.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\SaludPro.8xjplg3tsc.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-HBa9XvhKfc5meIgbZ5pauaPytd5G2lzQGmcWqAZG7dE="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1126"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HBa9XvhKfc5meIgbZ5pauaPytd5G2lzQGmcWqAZG7dE=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Feb 2025 15:01:55 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1126"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HBa9XvhKfc5meIgbZ5pauaPytd5G2lzQGmcWqAZG7dE=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Feb 2025 20:20:16 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>
