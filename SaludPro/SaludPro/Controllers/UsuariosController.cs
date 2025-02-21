@@ -2,6 +2,7 @@
 
 namespace SaludPro.Controllers
 {
+    private readonly UsuariosServices
     public class UsuariosController : Controller
     {
         public IActionResult ListUsuarios()

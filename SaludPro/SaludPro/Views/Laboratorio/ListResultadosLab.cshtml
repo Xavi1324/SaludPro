@@ -1,0 +1,54 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Resultados de Laboratorio";
+}
+
+<h2>Resultados de Laboratorio</h2>
+
+<div class="mb-3">
+    <label for="cedulaBusqueda" class="form-label">Buscar por Cédula:</label>
+    <div class="input-group">
+        <input type="text" id="cedulaBusqueda" class="form-control" placeholder="Ingrese la cédula del paciente">
+        <button class="btn btn-primary" onclick="buscarPorCedula()">Buscar</button>
+    </div>
+</div>
+
+<div class="row g-4" id="listaResultados">
+    <!-- Tarjeta de ejemplo, se generarán dinámicamente -->
+    <div class="card mb-4 resultado-item">
+        <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Juan Pérez</h5>
+            <p class="card-text flex-grow-1">
+                <strong>Cédula:</strong> 001-1234567-8<br />
+                <strong>Prueba:</strong> Análisis de Sangre<br />
+            </p>
+            <div class="d-flex justify-content-center gap-2">
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#reportarResultadoModal" data-id="1" onclick="abrirModalResultado(1)">
+                    Reportar Resultado
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para reportar resultado -->
+<div class="modal fade" id="reportarResultadoModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Reportar Resultado</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <label for="resultadoPrueba" class="form-label">Ingrese el resultado:</label>
+                <textarea id="resultadoPrueba" class="form-control" rows="3"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" onclick="finalizarResultado()">Finalizar</button>
+            </div>
+        </div>
+    </div>
+</div>

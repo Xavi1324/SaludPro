@@ -1,4 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using SaludPro.Infrastructure.Persistence.Contexts;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<SaludProContext>(options => options.UseSqlServer(connectionString));
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

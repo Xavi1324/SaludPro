@@ -27,14 +27,16 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Medicos" asp-action="ListMedicos">Medicos</a>
                         </li>
                         <li class="nav-item">
-                            @* se puebe poner una condicional depende del usuario *@
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Login">Laboratorio</a> 
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Laboratorio" asp-action="ListPuebasLab">Puebas de Laboratorio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Login">Pacientes</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Pacientes" asp-action="ListPacientes">Pacientes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Register" asp-action="Register">Citas</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Laboratorio" asp-action="ListResultadosLab">Resultados del Laboratorio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Citas" asp-action="ListCitas">Citas</a>
                         </li>
 
                     </ul>

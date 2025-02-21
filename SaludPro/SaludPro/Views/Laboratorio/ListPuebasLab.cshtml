@@ -1,0 +1,142 @@
+﻿@* @model IEnumerable<Aplication.ViewModels.Laboratorio.PruebaLaboratorioViewModel>
+ *@
+@{
+    ViewData["Title"] = "Pruebas de Laboratorio";
+}
+
+@* <div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Pruebas de Laboratorio</h2>
+        <a asp-action="AddPrueba" class="btn btn-primary mb-3">Agregar Prueba</a>
+    </div>
+
+    <div class="pruebas-container">
+        @if (Model == null || !Model.Any())
+        {
+            <div class="alert alert-warning">No hay pruebas de laboratorio disponibles</div>
+        }
+        else
+        {
+            @foreach (var item in Model)
+            {
+                <div class="d-flex justify-content-between align-items-center pruebas-list p-3 m-2 bg-white text-black rounded-2 shadow-sm">
+                    <p class="ms-2 mb-0">@item.NombrePrueba</p>
+                    <div>
+                        <a asp-action="EditPrueba" asp-route-id="@item.IdPrueba" class="btn btn-warning btn-sm mx-1">Editar</a>
+                        <a asp-action="DeletePrueba" asp-route-id="@item.IdPrueba" class="btn btn-danger btn-sm mx-1">Eliminar</a>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div> *@
+    <h2>Pruebas de Laboratorio</h2>
+    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#crearPruebaModal">Agregar Prueba</button>
+<div class="container-fluid">
+    
+
+    <div class="pruebas-container">
+        @* @if (Model == null || !Model.Any())
+        {
+            <div class="alert alert-warning">No hay pruebas de laboratorio disponibles</div>
+        }
+        else
+        {
+            @foreach (var item in Model)
+            {
+                <div class="d-flex justify-content-between align-items-center pruebas-list p-3 m-2 bg-white text-black rounded-2 shadow-sm">
+                <p class="ms-2 mb-0">NombrePrueba</p>
+                <div class="d-flex justify-content-center gap-2">
+                    <button class="btn btn-warning mx-1" data-bs-toggle="modal" data-bs-target="#editarPruebaModal" data-id="@item.IdPrueba" data-nombre="@item.NombrePrueba">
+                        Editar
+                    </button>
+                    <button type="button" class="btn btn-danger mx-1" data-bs-toggle="modal" data-bs-target="#confirmarEliminacionModal" data-id="@item.IdPrueba">
+                        Eliminar
+                    </button>
+               </div>
+        </div>
+            }
+        } *@
+
+        <div class="d-flex justify-content-between align-items-center pruebas-list p-3 m-2 bg-white text-black rounded-2 shadow-sm">
+            <p class="ms-2 mb-0">NombrePrueba</p>
+            <div class="d-flex justify-content-center gap-2">
+                <button class="btn btn-warning mx-1" data-bs-toggle="modal" data-bs-target="#editarPruebaModal" data-id="item.IdPrueba" data-nombre="item.NombrePrueba">
+                    Editar
+                </button>
+                <button type="button" class="btn btn-danger mx-1" data-bs-toggle="modal" data-bs-target="#confirmarEliminacionModal" data-id="item.IdPrueba">
+                    Eliminar
+                </button>
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+<!-- Modal para Crear Prueba -->
+<div class="modal fade" id="crearPruebaModal" tabindex="-1" aria-labelledby="crearPruebaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Crear Prueba de Laboratorio</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="nombrePrueba" class="form-label">Nombre de la Prueba</label>
+                        <input type="text" class="form-control" id="nombrePrueba" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Crear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editarPruebaModal" tabindex="-1" aria-labelledby="editarPruebaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Editar Prueba de Laboratorio</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="editarNombrePrueba" class="form-label">Nombre de la Prueba</label>
+                        <input type="text" class="form-control" id="editarNombrePrueba" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para Confirmar Eliminación -->
+<div class="modal fade" id="confirmarEliminacionModal" tabindex="-1" aria-labelledby="confirmarEliminacionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Eliminar Prueba de Laboratorio</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>¿Está seguro que desea eliminar esta prueba de laboratorio?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
