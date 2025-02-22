@@ -10,5 +10,8 @@ namespace SaludPro.Core.Domain.Common
     {
         public string Cedula { get; set; }
         public string FotoUrl { get; set; }
+
+        public string Telefono { get; set; }
+
     }
 }

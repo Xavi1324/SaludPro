@@ -1,0 +1,16 @@
+C:\Proyecto\SaludPro\SaludPro\SaludPro.Core.Application\obj\Debug\net8.0\SaludPro.Core.Application.csproj.AssemblyReference.cache
+C:\Proyecto\SaludPro\SaludPro\SaludPro.Core.Application\obj\Debug\net8.0\SaludPro.Core.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyecto\SaludPro\SaludPro\SaludPro.Core.Application\obj\Debug\net8.0\SaludPro.Core.Application.AssemblyInfoInputs.cache
+C:\Proyecto\SaludPro\SaludPro\SaludPro.Core.Application\obj\Debug\net8.0\SaludPro.Core.Application.AssemblyInfo.cs
+C:\Proyecto\SaludPro\SaludPro\SaludPro.Core.Application\obj\Debug\net8.0\SaludPro.Core.Application.csproj.CoreCompileInputs.cache
+C:\Proyecto\SaludPro\SaludPro\SaludPro.Core.Application\obj\Debug\net8.0\SaludPro.Core.Application.sourcelink.json
+C:\Proyecto\SaludPro\SaludPro\SaludPro.Core.Application\bin\Debug\net8.0\SaludPro.Core.Application.deps.json
+C:\Proyecto\SaludPro\SaludPro\SaludPro.Core.Application\bin\Debug\net8.0\SaludPro.Core.Application.dll
+C:\Proyecto\SaludPro\SaludPro\SaludPro.Core.Application\bin\Debug\net8.0\SaludPro.Core.Application.pdb
+C:\Proyecto\SaludPro\SaludPro\SaludPro.Core.Application\bin\Debug\net8.0\SaludPro.Core.Domain.dll
+C:\Proyecto\SaludPro\SaludPro\SaludPro.Core.Application\bin\Debug\net8.0\SaludPro.Core.Domain.pdb
+C:\Proyecto\SaludPro\SaludPro\SaludPro.Core.Application\obj\Debug\net8.0\SaludPro.85FE7E68.Up2Date
+C:\Proyecto\SaludPro\SaludPro\SaludPro.Core.Application\obj\Debug\net8.0\SaludPro.Core.Application.dll
+C:\Proyecto\SaludPro\SaludPro\SaludPro.Core.Application\obj\Debug\net8.0\refint\SaludPro.Core.Application.dll
+C:\Proyecto\SaludPro\SaludPro\SaludPro.Core.Application\obj\Debug\net8.0\SaludPro.Core.Application.pdb
+C:\Proyecto\SaludPro\SaludPro\SaludPro.Core.Application\obj\Debug\net8.0\ref\SaludPro.Core.Application.dll

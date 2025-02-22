@@ -1,50 +1,50 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SaludPro.Core.Application.Interfaces.Repositories;
 using SaludPro.Core.Application.Interfaces.Services;
 
 namespace SaludPro.Core.Application.Services
 {
-    public class GenericServices<T> : IGenericServices<T> where T : class
+    public class GenericServices<Entity> : IGenericServices<Entity> where Entity : class
     {
-        private readonly DbContext _dbContext;
-        private readonly DbSet<T> _dbSet;
-        public GenericServices(DbContext dbContext)
+        private readonly IGenericRepositoryAsync<Entity> _dbContext;
+        
+        public GenericServices(IGenericRepositoryAsync<Entity> dbContext)
         {
             _dbContext = dbContext;
-            _dbSet = _dbContext.Set<T>();
+            
         }
-
-        public async Task<T> CreateAsync(T entity)
+        public async Task<Entity> CreateAsync(Entity entity)
         {
-            _dbSet.Add(entity);
-            await _dbContext.SaveChangesAsync();
-            return entity;
+            await _dbContext.AddAsync(entity);
+            return entity; 
         }
 
         public async Task DeleteAsync(int id)
         {
-            var entity = await _dbSet.FindAsync(id);
-            if (entity != null)
+            var entity = await _dbContext.GetByIdAsync(id);
+            if (entity != null) // Si la entidad existe, se elimina
             {
-                _dbSet.Remove(entity);
-                await _dbContext.SaveChangesAsync();
+                await _dbContext.DeleteAsync(entity);
+            }
+            else
+            {
+                throw new Exception("No se encontró la entidad");
             }
         }
-
-        public async Task<List<T>> GetAllAsync()
+        public async Task<List<Entity>> GetAllAsync()
         {
-            return await _dbSet.ToListAsync();
+            return await _dbContext.GetAllAsync();
         }
 
-        public async Task<T?> GetByIdAsync(int id)
+        public async Task<Entity?> GetByIdAsync(int id)
         {
-            return await _dbSet.FindAsync(id);
+            return await _dbContext.GetByIdAsync(id); 
         }
 
-        public async Task<T> UpdateAsync(T entity)
+        public async Task<Entity> UpdateAsync(Entity entity)
         {
-            _dbSet.Update(entity);
-            await _dbContext.SaveChangesAsync();
-            return entity;
+            await _dbContext.EditAsync(entity); 
+            return entity; 
         }
     }
 }

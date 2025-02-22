@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SaludPro.Core.Application.Interfaces.Services
+﻿namespace SaludPro.Core.Application.Interfaces.Services
 {
-    public interface IGenericServices<T> where T : class
+    public interface IGenericServices<Entity> 
     {
-        Task<T> CreateAsync(T entity);
+        Task<Entity> CreateAsync(Entity entity);
         Task DeleteAsync(int id);
-        Task<List<T>> GetAllAsync();
-        Task<T?> GetByIdAsync(int id);
-        Task<T> UpdateAsync(T entity);
+        Task<List<Entity>> GetAllAsync();
+        Task<Entity?> GetByIdAsync(int id);
+        Task<Entity> UpdateAsync(Entity entity);
     }
 
 }
